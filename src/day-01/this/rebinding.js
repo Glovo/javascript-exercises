@@ -11,7 +11,7 @@ ourFunction(); // Hannah Montana
 ourFunction = ourFunction.bind(contextTwo);
 ourFunction(); // Hannah Montana
 
-// Extend the method bind so that it allows to change context more than once
+// EXERCISE: Extend the method bind so that it allows to change context more than once
 // Function.prototype.bind = function(context) {
 
 // }
