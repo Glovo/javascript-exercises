@@ -1,0 +1,23 @@
+<html>
+    <head><title>Example this</title></head>
+    <body>
+        <h1> Open the console </h1>
+        <button id="clicker">Click me!</button>
+
+        <script>
+            // Fix this function so on click it prints the button element
+            class ClickHandler {
+                constructor(element) {
+                    this.element = element
+                    window.addEventListener("click", this.printElement)
+                }
+
+                printElement() {
+                    console.log(this.element)
+                }
+            }
+
+            new ClickHandler(document.querySelector("#clicker"))
+        </script>
+    </body>
+</html>
