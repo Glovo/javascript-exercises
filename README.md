@@ -1,11 +1,17 @@
-# advanced-javascript
-Exercises for advanced javascript
+# Advanced Frontend
 
+Exercises for advanced frontend course
 
-2 branches - 
+## Set-up
 
-problems - day 1
+Install dependencies
 
-solutions - day 1
+```zsh
+yarn
+```
 
-solutions - day 2
+Run test
+
+```zsh
+yarn test --watch async/
+```
