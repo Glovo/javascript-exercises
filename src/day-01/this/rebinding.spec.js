@@ -27,10 +27,14 @@ describe('Rebinding', () => {
     const contextOne = { name: 'Hannah Montana' }
     const contextTwo = { name: 'Miley Cirus' }
 
-    const functionOne = ourFunction.bind(contextOne)
-    expect(functionOne()).toBe(contextOne.name);
+    let functionBind = function ourFunction() {
+      return this.name;
+    };
 
-    const functionTwo = ourFunction.bind(contextTwo)
-    expect(functionTwo()).toBe(contextTwo.name)
+    functionBind = functionBind.bind(contextOne)
+    expect(functionBind()).toBe(contextOne.name);
+
+    functionBind = functionBind.bind(contextTwo)
+    expect(functionBind()).toBe(contextTwo.name)
   });
 });
