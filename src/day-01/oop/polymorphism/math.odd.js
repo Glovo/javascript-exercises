@@ -1,6 +1,6 @@
 const Math = require('../mathlib/math.obj');
 
-class EvenMath extends Math {
+class OddMath extends Math {
   get() {
     const { current } = this;
 
@@ -8,4 +8,4 @@ class EvenMath extends Math {
   }
 }
 
-module.exports = EvenMath;
+module.exports = OddMath;
