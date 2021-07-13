@@ -38,4 +38,12 @@ export const runAfterEachOther = async () => {
 }
 
 // Exercise 5: Recreate Promise.all with async / await, and use the previous timers. It should execute after 5 seconds
-const promiseAll = async (promiseList) => null
+export const promiseAll = async (promiseList) => {
+    const promises = promiseList.map(promise => promise())
+
+    for (let promise of promises) {
+        await promise
+    }
+
+    return true
+}
