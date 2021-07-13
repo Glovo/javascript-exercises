@@ -16,6 +16,14 @@ describe('Functional programming', () => {
 
            expect(mapObj(double, object)).toEqual({a: 2, b: 4, c: 6})
         });
+
+        it('does not mutate original object', () => {
+            const object = { a: 1, b: 2, c: 3}
+            const mappedObject = mapObj(double, object)
+
+
+            expect(mappedObject).not.toEqual(object)
+        });
     });
 
     describe('recursiveMapObj', () => {

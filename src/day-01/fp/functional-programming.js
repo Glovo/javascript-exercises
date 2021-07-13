@@ -30,7 +30,7 @@ export const isDivisibleBy = (module) => (input) => input % module === 0
 export const compose = (...args) => (input) =>
     args.reduce((acc, partialFn) => partialFn(acc), input)
 
-// EXERCISE 5: Implement map  (map(Function, Array)) with recursivity, you cant use map / reduce
+// EXERCISE 5: Implement map  (map(Function, Array)) recursively, you cant use map / reduce
 export const recursiveMap = (mapFn, arr) => {
     if (arr.length === 0) { return []}
 
