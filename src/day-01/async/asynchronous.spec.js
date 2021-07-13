@@ -84,10 +84,12 @@ describe('Functional programming', () => {
                     createTimerPromise(2)
                 ]).then(mockFn)
 
-                jest.advanceTimersByTime(5000);
-
-                // One per stacked promise: 3 + 1
+                jest.advanceTimersByTime(3000);
                 await Promise.resolve()
+                expect(mockFn).not.toHaveBeenCalled()
+
+                jest.advanceTimersByTime(2000);
+                // One per stacked promise: 3 + 1
                 await Promise.resolve()
                 await Promise.resolve()
                 await Promise.resolve()
